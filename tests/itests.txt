@@ -1,0 +1,27 @@
+C_help                         FAIL (see tests/outputs/C_help.diff for details)
+C_simple_H                     pass
+C_simple_s                     FAIL (see tests/outputs/C_simple_s.diff for details)
+C_multiseg_sH                  FAIL (see tests/outputs/C_multiseg_sH.diff for details)
+C_multiseg_f                   FAIL (see tests/outputs/C_multiseg_f.diff for details)
+C_multiseg_fsHM                FAIL (see tests/outputs/C_multiseg_fsHM.diff for details)
+C_stripped_sM                  FAIL (see tests/outputs/C_stripped_sM.diff for details)
+C_more_flags_s                 FAIL (see tests/outputs/C_more_flags_s.diff for details)
+B_stripped_m                   FAIL (see tests/outputs/B_stripped_m.diff for details)
+B_stripped_mH                  FAIL (see tests/outputs/B_stripped_mH.diff for details)
+B_all_flags                    FAIL (see tests/outputs/B_all_flags.diff for details)
+B_repeated                     FAIL (see tests/outputs/B_repeated.diff for details)
+B_stack                        FAIL (see tests/outputs/B_stack.diff for details)
+A_brief_full                   FAIL (see tests/outputs/A_brief_full.diff for details)
+A_bad_phdr_vaddr               FAIL (see tests/outputs/A_bad_phdr_vaddr.diff for details)
+A_bad_phdr_short               FAIL (see tests/outputs/A_bad_phdr_short.diff for details)
+A_bad_phdr_magic               FAIL (see tests/outputs/A_bad_phdr_magic.diff for details)
+A_no_flags                     pass
+A_no_flags_bad                 FAIL (see tests/outputs/A_no_flags_bad.diff for details)
+A_missing_file                 FAIL (see tests/outputs/A_missing_file.diff for details)
+A_extra_params                 FAIL (see tests/outputs/A_extra_params.diff for details)
+A_mem_conflict                 FAIL (see tests/outputs/A_mem_conflict.diff for details)
+A_full_conflict                FAIL (see tests/outputs/A_full_conflict.diff for details)
+A_unaligned1                   FAIL (see tests/outputs/A_unaligned1.diff for details)
+A_unaligned2                   FAIL (see tests/outputs/A_unaligned2.diff for details)
+No memory leak found.
+No uninitialized value found.

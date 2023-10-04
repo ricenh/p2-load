@@ -1,0 +1,4 @@
+--- outputs/A_no_flags_bad.txt	2023-10-03 22:33:52.367042560 -0400
++++ expected/A_no_flags_bad.txt	2023-09-19 13:29:21.000000000 -0400
+@@ -0,0 +1 @@
++Failed to read file

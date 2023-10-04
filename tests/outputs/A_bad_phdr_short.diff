@@ -1,0 +1,8 @@
+--- outputs/A_bad_phdr_short.txt	2023-10-03 22:33:50.047022065 -0400
++++ expected/A_bad_phdr_short.txt	2023-09-19 13:29:21.000000000 -0400
+@@ -1,4 +1 @@
+-Usage: ../y86 <option(s)> mini-elf-file
+- Options are:
+-  -h      Display usage
+-  -H      Show the Mini-ELF header
++Failed to read file
