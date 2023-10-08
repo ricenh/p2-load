@@ -1,19 +1,19 @@
-==144046== Memcheck, a memory error detector
-==144046== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==144046== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==144046== Command: ../y86 -s inputs/moreflags.o
-==144046== 
+==3279347== Memcheck, a memory error detector
+==3279347== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3279347== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3279347== Command: ../y86 -s inputs/moreflags.o
+==3279347== 
 ../y86: invalid option -- 's'
 Usage: ../y86 <option(s)> mini-elf-file
  Options are:
   -h      Display usage
   -H      Show the Mini-ELF header
-==144046== 
-==144046== HEAP SUMMARY:
-==144046==     in use at exit: 0 bytes in 0 blocks
-==144046==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
-==144046== 
-==144046== All heap blocks were freed -- no leaks are possible
-==144046== 
-==144046== For lists of detected and suppressed errors, rerun with: -s
-==144046== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3279347== 
+==3279347== HEAP SUMMARY:
+==3279347==     in use at exit: 0 bytes in 0 blocks
+==3279347==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
+==3279347== 
+==3279347== All heap blocks were freed -- no leaks are possible
+==3279347== 
+==3279347== For lists of detected and suppressed errors, rerun with: -s
+==3279347== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

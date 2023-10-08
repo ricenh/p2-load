@@ -1,4 +1,4 @@
---- outputs/A_brief_full.txt	2023-10-05 22:26:15.666642245 -0400
+--- outputs/A_brief_full.txt	2023-10-08 12:06:19.496988264 -0400
 +++ expected/A_brief_full.txt	2023-09-19 13:29:21.000000000 -0400
 @@ -2,3 +2,8 @@
   Options are:

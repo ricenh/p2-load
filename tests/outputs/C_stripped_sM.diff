@@ -1,4 +1,4 @@
---- outputs/C_stripped_sM.txt	2023-10-05 22:26:10.710598550 -0400
+--- outputs/C_stripped_sM.txt	2023-10-08 12:06:14.560945310 -0400
 +++ expected/C_stripped_sM.txt	2023-09-19 13:29:21.000000000 -0400
 @@ -1,4 +1,260 @@
 -Usage: ../y86 <option(s)> mini-elf-file

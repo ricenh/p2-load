@@ -1,6 +1,4 @@
 Running suite(s): Default
-63%: Checks: 11, Failures: 4, Errors: 0
+81%: Checks: 11, Failures: 2, Errors: 0
 public.c:74:F:Public:C_load_segment:0: Assertion 'memory[i+16] == expected[i]' failed
-private.c:102:F:Private:A_error_load_segment_null_memory:0: Assertion '!rc' failed
-private.c:118:F:Private:A_error_load_segment_null_file:0: Assertion '!rc' failed
 private.c:137:F:Private:A_error_load_segment_bad_address:0: Assertion '!rc' failed

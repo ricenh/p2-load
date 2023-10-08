@@ -1,4 +1,4 @@
---- outputs/C_multiseg_fsHM.txt	2023-10-05 22:26:10.002592308 -0400
+--- outputs/C_multiseg_fsHM.txt	2023-10-08 12:06:13.808938766 -0400
 +++ expected/C_multiseg_fsHM.txt	2023-09-19 13:29:21.000000000 -0400
 @@ -1,4 +1,268 @@
 -Usage: ../y86 <option(s)> mini-elf-file
