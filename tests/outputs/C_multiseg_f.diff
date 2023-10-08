@@ -1,10 +1,15 @@
---- outputs/C_multiseg_f.txt	2023-10-08 12:06:13.060932256 -0400
+--- outputs/C_multiseg_f.txt	2023-10-08 12:40:52.750964039 -0400
 +++ expected/C_multiseg_f.txt	2023-09-19 13:29:21.000000000 -0400
-@@ -1,4 +1,268 @@
+@@ -1,9 +1,268 @@
 -Usage: ../y86 <option(s)> mini-elf-file
 - Options are:
 -  -h      Display usage
 -  -H      Show the Mini-ELF header
+-  -a      Show all with brief memory
+-  -f      Show all with full memory
+-  -s      Show the program headers
+-  -m      Show the memory contents (brief)
+-  -M      Show the memory contents (full)
 +01 00 00 01 10 00 04 00  00 00 00 00 45 4c 46 00
 +Mini-ELF version 1
 +Entry point 0x100

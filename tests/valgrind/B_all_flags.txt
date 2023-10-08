@@ -1,19 +1,24 @@
-==3279374== Memcheck, a memory error detector
-==3279374== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3279374== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3279374== Command: ../y86 -Hsma inputs/simple.o
-==3279374== 
+==3319669== Memcheck, a memory error detector
+==3319669== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3319669== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3319669== Command: ../y86 -Hsma inputs/simple.o
+==3319669== 
 ../y86: invalid option -- 's'
 Usage: ../y86 <option(s)> mini-elf-file
  Options are:
   -h      Display usage
   -H      Show the Mini-ELF header
-==3279374== 
-==3279374== HEAP SUMMARY:
-==3279374==     in use at exit: 0 bytes in 0 blocks
-==3279374==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
-==3279374== 
-==3279374== All heap blocks were freed -- no leaks are possible
-==3279374== 
-==3279374== For lists of detected and suppressed errors, rerun with: -s
-==3279374== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+  -a      Show all with brief memory
+  -f      Show all with full memory
+  -s      Show the program headers
+  -m      Show the memory contents (brief)
+  -M      Show the memory contents (full)
+==3319669== 
+==3319669== HEAP SUMMARY:
+==3319669==     in use at exit: 0 bytes in 0 blocks
+==3319669==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
+==3319669== 
+==3319669== All heap blocks were freed -- no leaks are possible
+==3319669== 
+==3319669== For lists of detected and suppressed errors, rerun with: -s
+==3319669== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

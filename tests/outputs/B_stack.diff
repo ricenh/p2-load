@@ -1,10 +1,15 @@
---- outputs/B_stack.txt	2023-10-08 12:06:18.816982347 -0400
+--- outputs/B_stack.txt	2023-10-08 12:40:59.751025317 -0400
 +++ expected/B_stack.txt	2023-09-19 13:29:21.000000000 -0400
-@@ -1,4 +1,27 @@
+@@ -1,9 +1,27 @@
 -Usage: ../y86 <option(s)> mini-elf-file
 - Options are:
 -  -h      Display usage
 -  -H      Show the Mini-ELF header
+-  -a      Show all with brief memory
+-  -f      Show all with full memory
+-  -s      Show the program headers
+-  -m      Show the memory contents (brief)
+-  -M      Show the memory contents (full)
 +01 00 00 01 10 00 05 00  f4 00 16 01 45 4c 46 00
 +Mini-ELF version 1
 +Entry point 0x100

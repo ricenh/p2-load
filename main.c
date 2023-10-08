@@ -11,8 +11,11 @@ int main (int argc, char **argv)
 {
     // parse command-line options
     bool print_header = false;
+    bool print_phdr = false;
+    bool print_membrief = false;
+    bool print_memfull = false;
     char *fn = NULL;
-    if (!parse_command_line_p1(argc, argv, &print_header, &fn)) {
+    if (!parse_command_line_p2(argc, argv, &print_header, &print_phdr, &print_membrief, &print_memfull, &fn)) {
         exit(EXIT_FAILURE);
     }
  

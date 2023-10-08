@@ -1,19 +1,24 @@
-==3279450== Memcheck, a memory error detector
-==3279450== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3279450== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3279450== Command: ../y86 -m inputs/bad-phdr_vaddr.o
-==3279450== 
+==3320161== Memcheck, a memory error detector
+==3320161== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3320161== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3320161== Command: ../y86 -m inputs/bad-phdr_vaddr.o
+==3320161== 
 ../y86: invalid option -- 'm'
 Usage: ../y86 <option(s)> mini-elf-file
  Options are:
   -h      Display usage
   -H      Show the Mini-ELF header
-==3279450== 
-==3279450== HEAP SUMMARY:
-==3279450==     in use at exit: 0 bytes in 0 blocks
-==3279450==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
-==3279450== 
-==3279450== All heap blocks were freed -- no leaks are possible
-==3279450== 
-==3279450== For lists of detected and suppressed errors, rerun with: -s
-==3279450== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+  -a      Show all with brief memory
+  -f      Show all with full memory
+  -s      Show the program headers
+  -m      Show the memory contents (brief)
+  -M      Show the memory contents (full)
+==3320161== 
+==3320161== HEAP SUMMARY:
+==3320161==     in use at exit: 0 bytes in 0 blocks
+==3320161==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
+==3320161== 
+==3320161== All heap blocks were freed -- no leaks are possible
+==3320161== 
+==3320161== For lists of detected and suppressed errors, rerun with: -s
+==3320161== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
