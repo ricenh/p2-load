@@ -12,11 +12,23 @@
 
 bool read_phdr (FILE *file, uint16_t offset, elf_phdr_t *phdr)
 {
+    if(!file || !offset || !phdr || (fseek(file, offset, SEEK_SET) != 0) || 
+    (fread(phdr, sizeof(elf_phdr_t), 1, file) != 1) || (phdr->magic != 0xDEADBEEF)) 
+    {
+        return false;
+    }
     return true;
 }
 
 bool load_segment (FILE *file, byte_t *memory, elf_phdr_t *phdr)
 {
+    if(!file || !memory || !phdr) {
+        return false;
+    }
+    if(fseek(file, phdr->p_offset, SEEK_SET) != 0) {
+        return false;
+    }
+
     return true;
 }
 

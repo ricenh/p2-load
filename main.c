@@ -37,7 +37,16 @@ int main (int argc, char **argv)
             dump_header(&hdr);
         }
         //add here broooo
-        // cleanup
+        elf_phdr_t phdr[2];
+        fseek(f, hdr.e_phdr_start, SEEK_SET);
+        fread(&phdr[0], sizeof(elf_phdr_t), 1, f);
+        fread(&phdr[1], sizeof(elf_phdr_t), 1, f); //PUT IN LOOP
+        
+        byte_t* mem = (byte_t*)calloc(MEMSIZE, 1);
+        fseek(f, phdr[0].p_offset, SEEK_SET);
+        fread(&mem[phdr[0].p_vaddr], phdr[0].p_size, 1, f);
+        free(mem);
+
         fclose(f);
  
     }

@@ -1,4 +1,4 @@
---- outputs/B_stack.txt	2023-10-03 22:33:47.779002030 -0400
+--- outputs/B_stack.txt	2023-10-05 22:26:14.934635792 -0400
 +++ expected/B_stack.txt	2023-09-19 13:29:21.000000000 -0400
 @@ -1,4 +1,27 @@
 -Usage: ../y86 <option(s)> mini-elf-file

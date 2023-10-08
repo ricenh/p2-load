@@ -1,13 +1,6 @@
 Running suite(s): Default
-0%: Checks: 11, Failures: 11, Errors: 0
-public.c:20:F:Public:C_read_phdr_code:0: Assertion 'phdr.p_offset == 0x38' failed
-public.c:40:F:Public:C_read_phdr_data:0: Assertion 'phdr.p_offset == 0x4d' failed
+63%: Checks: 11, Failures: 4, Errors: 0
 public.c:74:F:Public:C_load_segment:0: Assertion 'memory[i+16] == expected[i]' failed
-private.c:15:F:Private:A_error_read_phdr_null:0: Assertion '!rc' failed
-private.c:24:F:Private:A_error_read_phdr_null_phdr:0: Assertion '!rc' failed
-private.c:35:F:Private:A_error_read_phdr_after_file_end:0: Assertion '!rc' failed
-private.c:46:F:Private:A_error_read_phdr_incorrect_magic:0: Assertion '!rc' failed
-private.c:60:F:Private:A_read_nonsequential_phdrs:0: Assertion 'phdr.p_offset == 0x0060' failed
 private.c:102:F:Private:A_error_load_segment_null_memory:0: Assertion '!rc' failed
 private.c:118:F:Private:A_error_load_segment_null_file:0: Assertion '!rc' failed
 private.c:137:F:Private:A_error_load_segment_bad_address:0: Assertion '!rc' failed

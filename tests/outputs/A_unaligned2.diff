@@ -1,4 +1,4 @@
---- outputs/A_unaligned2.txt	2023-10-03 22:33:56.695080793 -0400
+--- outputs/A_unaligned2.txt	2023-10-05 22:26:23.630712463 -0400
 +++ expected/A_unaligned2.txt	2023-09-19 13:29:21.000000000 -0400
 @@ -1,4 +1,18 @@
 -Usage: ../y86 <option(s)> mini-elf-file

@@ -1,4 +1,4 @@
---- outputs/A_mem_conflict.txt	2023-10-03 22:33:54.371060263 -0400
+--- outputs/A_mem_conflict.txt	2023-10-05 22:26:21.514693806 -0400
 +++ expected/A_mem_conflict.txt	2023-09-19 13:29:21.000000000 -0400
 @@ -2,3 +2,8 @@
   Options are:
