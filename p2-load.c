@@ -68,13 +68,16 @@ bool parse_command_line_p2 (int argc, char **argv,
         bool *print_membrief, bool *print_memfull,
         char **filename)
 {
-    if (argv == NULL || print_header == NULL || filename == NULL) {
+    if (argv == NULL || print_header == NULL || print_phdrs == NULL ||
+    print_membrief == NULL || print_memfull == NULL || filename == NULL) 
+    {
         return false;
     }
  
     // parameter parsing w/ getopt()
     int c;
-    while ((c = getopt(argc, argv, "hH")) != -1) {
+    while ((c = getopt(argc, argv, "hHafsmM")) != -1) 
+    {
         switch (c) {
             case 'h':
                 usage_p2(argv);
@@ -82,13 +85,33 @@ bool parse_command_line_p2 (int argc, char **argv,
             case 'H':
                 *print_header = true;
                 break;
+            case 'a':
+                *print_header = true;
+                *print_phdrs = true;
+                *print_membrief = true;
+                break;
+            case 'f':
+                *print_header = true;
+                *print_phdrs = true;
+                *print_memfull = true;
+                break;
+            case 's':
+                *print_phdrs = true;
+                break;
+            case 'm':
+                *print_membrief = true;
+                break;
+            case 'M':
+                *print_memfull = true;
+                break;
             default:
                 usage_p2(argv);
                 return false;
         }
     }
  
-    if (optind != argc-1) {
+    if (optind != argc-1) 
+    {
         // no filename (or extraneous input)
         usage_p2(argv);
         return false;
@@ -100,11 +123,85 @@ bool parse_command_line_p2 (int argc, char **argv,
 
 void dump_phdrs (uint16_t numphdrs, elf_phdr_t *phdrs)
 {
-    printf(" Segment   Offset    VirtAddr  FileSize  Type      Flag\n");
+    printf(" Segment   Offset    Size      VirtAddr  Type      Flags\n");
+    char *type;
+    char *flag;
+    for(int i=0; i < numphdrs; i++) 
+    {
+        switch(phdrs[i].p_type) 
+        {
+            case 0:  
+                type = "DATA      "; 
+                break;
+            case 1:  
+                type = "CODE      "; 
+                break;
+            case 2:  
+                type = "STACK     "; 
+                break;
+            case 3:  
+                type = "HEAP      "; 
+                break;
+            default: 
+                type = "UNKNOWN   "; 
+                break;
+        }
+        switch(phdrs[i].p_flags) {
+            case 1:
+                flag = "  X";
+                break;
+            case 2:
+                flag = " W ";
+                break;
+            case 3:
+                flag = " WX";
+                break;
+            case 4:
+                flag = "R  ";
+                break;
+            case 5:
+                flag = "R X";
+                break;
+            case 6:
+                flag = "RW ";
+                break;
+            case 7:
+                flag = "RWX";
+                break;
+            default:
+                flag = "   ";
+                break;
+        }
+         printf("  %02d       0x%04x    0x%04x    0x%04x    %s%s\n",
+               i, phdrs[i].p_offset, phdrs[i].p_size,
+               phdrs[i].p_vaddr, type, flag);
+    }
 }
 
 void dump_memory (byte_t *memory, uint16_t start, uint16_t end)
 {
-
+    if(start == end)
+    {
+	    return;
+    }
+    printf("Contents of memory from %04x to %04x:\n", start, end);
+    printf("  %04x ", start);
+    int j = 0;
+    for(int i = start; i < end; i++)
+    {
+        if((j % 8) == 0 && (j % 16) != 0)
+        {
+            printf(" ");
+        }
+        if((j % 16) == 0 && j != 0)
+        {
+            printf("\n");
+            printf("  %04x ", i);
+        }
+        printf(" %02x", memory[i]);
+        j++;
+    }
+    printf("\n");
 }
+
 

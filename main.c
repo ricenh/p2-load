@@ -34,23 +34,53 @@ int main (int argc, char **argv)
             printf("Failed to read file\n");
             exit(EXIT_FAILURE);
         }
- 
+        
+        //P2: load and check the phdr
+        elf_phdr_t phdr[hdr.e_num_phdr];
+        for(int i = 0; i < hdr.e_num_phdr; i++) 
+        {
+            uint16_t offset = hdr.e_phdr_start + (i * sizeof(elf_phdr_t));   
+            if(!read_phdr(f, offset, &phdr[i]))
+            {
+	            printf("Failed to read file\n");
+                exit(EXIT_FAILURE);
+            }
+        }
+
+        //allocates 4kb of memory
+        byte_t* memory = (byte_t*)calloc(MEMSIZE, 1);
+        for(int i = 0; i < hdr.e_num_phdr; i++) {
+            if(!load_segment(f, memory, &phdr[i])) 
+            {
+                free(memory);
+                printf("Failed to read file\n");
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+
         // P1 output
         if (print_header) {
             dump_header(&hdr);
         }
-        //add here broooo
-        elf_phdr_t phdr[2];
-        fseek(f, hdr.e_phdr_start, SEEK_SET);
-        fread(&phdr[0], sizeof(elf_phdr_t), 1, f);
-        fread(&phdr[1], sizeof(elf_phdr_t), 1, f); //PUT IN LOOP
+
+        //dump all phdrs in file
+        if(print_phdr) {
+            dump_phdrs(hdr.e_num_phdr, phdr);
+        }
         
-        byte_t* mem = (byte_t*)calloc(MEMSIZE, 1);
-        fseek(f, phdr[0].p_offset, SEEK_SET);
-        fread(&mem[phdr[0].p_vaddr], phdr[0].p_size, 1, f);
-        free(mem);
+        
+        //dump the full memory
+        if(print_memfull) {
+            dump_memory(memory, 0, MEMSIZE);
+        }
+        else if(print_membrief) {
+            //drump the brief memory
+
+        }
 
         fclose(f);
+        free(memory);
  
     }
  
