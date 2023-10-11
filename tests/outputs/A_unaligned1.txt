@@ -8,3 +8,9 @@ There is no string table present
   00       0x004c    0x0009    0x0000    CODE      R X
   01       0x0055    0x0002    0x0118    CODE      R X
   02       0x0057    0x0008    0x013a    DATA      RW 
+Contents of memory from 0000 to 0009:
+  0000  70 18 01 00 00 00 00 00  00
+Contents of memory from 0118 to 011a:
+  0118  10 00
+Contents of memory from 013a to 0142:
+  013a  39 30 00 00 00 00 00 00

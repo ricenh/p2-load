@@ -7,3 +7,8 @@ There is a string table starting at offset 112 (0x70)
  Segment   Offset    Size      VirtAddr  Type      Flags
   00       0x0038    0x0015    0x0100    CODE      R X
   01       0x004d    0x000b    0x0200    DATA      RW 
+Contents of memory from 0100 to 0115:
+  0100  30 f3 0f 00 00 00 20 31  40 13 fd ff ff ff 60 31
+  0110  70 08 01 00 00
+Contents of memory from 0200 to 020b:
+  0200  aa bb cc dd 00 00 00 dd  00 00 00

@@ -1,8 +1,0 @@
---- outputs/B_stripped_m.txt	2023-10-10 12:39:48.039338223 -0400
-+++ expected/B_stripped_m.txt	2023-09-19 13:29:21.000000000 -0400
-@@ -0,0 +1,5 @@
-+Contents of memory from 0100 to 0115:
-+  0100  30 f3 0f 00 00 00 20 31  40 13 fd ff ff ff 60 31
-+  0110  70 08 01 00 00
-+Contents of memory from 0200 to 020b:
-+  0200  aa bb cc dd 00 00 00 dd  00 00 00
